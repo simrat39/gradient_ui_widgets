@@ -5,3 +5,4 @@ export 'buttons/GradientRaisedButton.dart';
 export 'buttons/GradientFloatingActionButton.dart';
 export 'text/GradientText.dart';
 export 'icon/GradientIcon.dart';
+export 'icon/GradientIconButton.dart';

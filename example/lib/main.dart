@@ -26,113 +26,248 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Gradient g = LinearGradient(
+  Gradient g1 = LinearGradient(
     colors: [
       Color(0xFF7F00FF),
       Color(0xFFE100FF),
     ],
   );
+  Gradient g2 = LinearGradient(colors: [
+    Color(0xfff12711),
+    Color(0xfff5af19),
+  ]);
 
   @override
   Widget build(BuildContext context) {
+    Widget space = SizedBox(height: 80);
+    Widget space2 = SizedBox(height: 20);
+    Widget space2_w = SizedBox(width: 20);
+
     return Scaffold(
-      floatingActionButton: a.GradientFloatingActionButton.extended(
-        onPressed: () {},
-        label: Text("This is a FAB"),
-        icon: Icon(Icons.add),
-        shape: StadiumBorder(),
-        gradient: g,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      floatingActionButton: Column(
         children: [
-          Row(
-            children: [
-              Spacer(),
-              Flexible(
-                child: a.GradientLinearProgressIndicator(
-                  valueGradient: g,
-                  backgroundColor: Colors.grey[200],
-                ),
-              ),
-              Spacer(),
-              Flexible(
-                child: a.GradientCircularProgressIndicator(
-                  valueGradient: g,
-                  backgroundColor: Colors.grey[200],
-                ),
-              ),
-              Spacer(),
-            ],
-          ),
-          Row(
-            children: [
-              Spacer(),
-              Flexible(
-                child: a.GradientLinearProgressIndicator(
-                  valueGradient: g,
-                  value: 0.8,
-                  backgroundColor: Colors.grey[200],
-                ),
-              ),
-              Spacer(),
-              Flexible(
-                child: a.GradientCircularProgressIndicator(
-                  valueGradient: g,
-                  value: 0.8,
-                  backgroundColor: Colors.grey[200],
-                ),
-              ),
-              Spacer(),
-            ],
-          ),
-          a.GradientRaisedButton(
+          Spacer(),
+          a.GradientFloatingActionButton.extended(
             onPressed: () {},
-            gradient: g,
-            textColor: Colors.white,
-            child: Text("This is a button"),
-          ),
-          a.GradientFloatingActionButton(
-            onPressed: () {},
-            child: Icon(Icons.wysiwyg),
+            label: Text("This is a FAB"),
+            icon: Icon(Icons.add),
             shape: StadiumBorder(),
-            gradient: g,
+            gradient: g1,
           ),
-          a.GradientText(
-            "THIS IS A \nGRADIENT TEXT",
-            gradient: g,
-            style: TextStyle(
-              fontSize: 60,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Flexible(
-                child: a.GradientIcon(
-                  Icons.add_box,
-                  gradient: g,
-                  size: 70,
-                ),
-              ),
-              Flexible(
-                child: a.GradientIcon(
-                  Icons.wrong_location,
-                  gradient: g,
-                  size: 70,
-                ),
-              ),
-              Flexible(
-                child: a.GradientIcon(
-                  Icons.cloud,
-                  gradient: g,
-                  size: 70,
-                ),
-              ),
-            ],
+          space2,
+          a.GradientFloatingActionButton.extended(
+            onPressed: () {},
+            label: Text("This is a FAB"),
+            icon: Icon(Icons.add),
+            shape: StadiumBorder(),
+            gradient: g2,
           ),
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            space,
+            Row(
+              children: [
+                Spacer(),
+                Flexible(
+                  child: Column(
+                    children: [
+                      a.GradientLinearProgressIndicator(
+                        valueGradient: g1,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                      space2,
+                      a.GradientLinearProgressIndicator(
+                        valueGradient: g2,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+                Flexible(
+                  child: Row(
+                    children: [
+                      a.GradientCircularProgressIndicator(
+                        valueGradient: g1,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                      space2_w,
+                      a.GradientCircularProgressIndicator(
+                        valueGradient: g2,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+              ],
+            ),
+            space,
+            Row(
+              children: [
+                Spacer(),
+                Flexible(
+                  child: Column(
+                    children: [
+                      a.GradientLinearProgressIndicator(
+                        valueGradient: g1,
+                        value: 0.8,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                      space2,
+                      a.GradientLinearProgressIndicator(
+                        valueGradient: g2,
+                        value: 0.8,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+                Flexible(
+                  child: Row(
+                    children: [
+                      a.GradientCircularProgressIndicator(
+                        valueGradient: g1,
+                        value: 0.8,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                      space2_w,
+                      a.GradientCircularProgressIndicator(
+                        valueGradient: g2,
+                        value: 0.8,
+                        backgroundColor: Colors.grey[200],
+                      ),
+                    ],
+                  ),
+                ),
+                Spacer(),
+              ],
+            ),
+            space,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    a.GradientRaisedButton(
+                      onPressed: () {},
+                      gradient: g1,
+                      textColor: Colors.white,
+                      child: Text("This is a button"),
+                    ),
+                    space2,
+                    a.GradientRaisedButton(
+                      onPressed: () {},
+                      gradient: g2,
+                      textColor: Colors.white,
+                      child: Text("This is a button"),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    a.GradientFloatingActionButton(
+                      onPressed: () {},
+                      child: Icon(Icons.wysiwyg),
+                      shape: StadiumBorder(),
+                      gradient: g1,
+                    ),
+                    space2_w,
+                    a.GradientFloatingActionButton(
+                      onPressed: () {},
+                      child: Icon(Icons.wysiwyg),
+                      shape: StadiumBorder(),
+                      gradient: g2,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            space,
+            Column(
+              children: [
+                a.GradientText(
+                  "THIS IS A",
+                  gradient: g1,
+                  style: TextStyle(
+                    fontSize: 60,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                a.GradientText(
+                  "GRADIENT TEXT",
+                  gradient: g2,
+                  style: TextStyle(
+                    fontSize: 60,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            space,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Flexible(
+                  child: Column(
+                    children: [
+                      a.GradientIcon(
+                        Icons.add_box,
+                        gradient: g1,
+                        size: 70,
+                      ),
+                      a.GradientIcon(
+                        Icons.add_box,
+                        gradient: g2,
+                        size: 70,
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Column(
+                    children: [
+                      a.GradientIconButton(
+                        icon: Icon(Icons.wrong_location),
+                        gradient: g1,
+                        iconSize: 70,
+                        onPressed: () => {},
+                      ),
+                      a.GradientIconButton(
+                        icon: Icon(Icons.wrong_location),
+                        gradient: g2,
+                        iconSize: 70,
+                        onPressed: () => {},
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Column(
+                    children: [
+                      a.GradientIcon(
+                        Icons.cloud,
+                        gradient: g1,
+                        size: 70,
+                      ),
+                      a.GradientIcon(
+                        Icons.cloud,
+                        gradient: g2,
+                        size: 70,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            space,
+          ],
+        ),
       ),
     );
   }
