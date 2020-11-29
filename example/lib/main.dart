@@ -33,6 +33,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: a.GradientFloatingActionButton.extended(
+        onPressed: () {},
+        label: Text("This is a FAB"),
+        icon: Icon(Icons.add),
+        shape: StadiumBorder(),
+        gradient: g,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -40,13 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
             a.GradientLinearProgressIndicator(
               valueGradient: g,
             ),
+            a.GradientLinearProgressIndicator(
+              valueGradient: g,
+              value: 0.8,
+            ),
             a.GradientRaisedButton(
-              onPressed: () {
-                print("hi");
-              },
+              onPressed: () {},
               gradient: g,
               textColor: Colors.white,
-              child: Text("Gradient Button", style: TextStyle()),
+              child: Text("This is a button"),
             ),
           ],
         ),
