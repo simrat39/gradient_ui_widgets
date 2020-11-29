@@ -43,41 +43,70 @@ class _MyHomePageState extends State<MyHomePage> {
         shape: StadiumBorder(),
         gradient: g,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            a.GradientLinearProgressIndicator(
-              valueGradient: g,
-              backgroundColor: Colors.grey[200],
-            ),
-            a.GradientLinearProgressIndicator(
-              valueGradient: g,
-              value: 0.8,
-              backgroundColor: Colors.grey[200],
-            ),
-            a.GradientRaisedButton(
-              onPressed: () {},
-              gradient: g,
-              textColor: Colors.white,
-              child: Text("This is a button"),
-            ),
-            a.GradientFloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.wysiwyg),
-              shape: StadiumBorder(),
-              gradient: g,
-            ),
-            a.GradientText(
-              "THIS IS A \nGRADIENT TEXT",
-              gradient: g,
-              style: TextStyle(
-                fontSize: 60,
-                fontWeight: FontWeight.bold,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            children: [
+              Spacer(),
+              Flexible(
+                child: a.GradientLinearProgressIndicator(
+                  valueGradient: g,
+                  backgroundColor: Colors.grey[200],
+                ),
               ),
+              Spacer(),
+              Flexible(
+                child: a.GradientCircularProgressIndicator(
+                  valueGradient: g,
+                  backgroundColor: Colors.grey[200],
+                ),
+              ),
+              Spacer(),
+            ],
+          ),
+          Row(
+            children: [
+              Spacer(),
+              Flexible(
+                child: a.GradientLinearProgressIndicator(
+                  valueGradient: g,
+                  value: 0.8,
+                  backgroundColor: Colors.grey[200],
+                ),
+              ),
+              Spacer(),
+              Flexible(
+                child: a.GradientCircularProgressIndicator(
+                  valueGradient: g,
+                  value: 0.8,
+                  backgroundColor: Colors.grey[200],
+                ),
+              ),
+              Spacer(),
+            ],
+          ),
+          a.GradientRaisedButton(
+            onPressed: () {},
+            gradient: g,
+            textColor: Colors.white,
+            child: Text("This is a button"),
+          ),
+          a.GradientFloatingActionButton(
+            onPressed: () {},
+            child: Icon(Icons.wysiwyg),
+            shape: StadiumBorder(),
+            gradient: g,
+          ),
+          a.GradientText(
+            "THIS IS A \nGRADIENT TEXT",
+            gradient: g,
+            style: TextStyle(
+              fontSize: 60,
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
