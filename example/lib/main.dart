@@ -11,6 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: ThemeData(
+        accentColor: Color(0xff7f00ff),
+        backgroundColor: Colors.grey[200],
+      ),
       home: MyHomePage(),
     );
   }
@@ -24,9 +28,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Gradient g = LinearGradient(
     colors: [
-      Color(0xFF0D47A1),
-      Color(0xFF1976D2),
-      Color(0xFF42A5F5),
+      Color(0xFF7F00FF),
+      Color(0xFFE100FF),
     ],
   );
 
@@ -46,16 +49,26 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             a.GradientLinearProgressIndicator(
               valueGradient: g,
+              backgroundColor: Colors.grey[200],
             ),
             a.GradientLinearProgressIndicator(
               valueGradient: g,
               value: 0.8,
+              backgroundColor: Colors.grey[200],
             ),
             a.GradientRaisedButton(
               onPressed: () {},
               gradient: g,
               textColor: Colors.white,
               child: Text("This is a button"),
+            ),
+            a.GradientText(
+              "THIS IS A \nGRADIENT TEXT",
+              gradient: g,
+              style: TextStyle(
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
