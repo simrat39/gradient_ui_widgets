@@ -106,6 +106,32 @@ class _MyHomePageState extends State<MyHomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                child: a.GradientIcon(
+                  Icons.add_box,
+                  gradient: g,
+                  size: 70,
+                ),
+              ),
+              Flexible(
+                child: a.GradientIcon(
+                  Icons.wrong_location,
+                  gradient: g,
+                  size: 70,
+                ),
+              ),
+              Flexible(
+                child: a.GradientIcon(
+                  Icons.cloud,
+                  gradient: g,
+                  size: 70,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
