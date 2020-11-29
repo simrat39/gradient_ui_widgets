@@ -62,6 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
               textColor: Colors.white,
               child: Text("This is a button"),
             ),
+            a.GradientFloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.wysiwyg),
+              shape: StadiumBorder(),
+              gradient: g,
+            ),
             a.GradientText(
               "THIS IS A \nGRADIENT TEXT",
               gradient: g,
