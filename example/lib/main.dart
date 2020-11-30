@@ -269,6 +269,44 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             space,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                a.GradientCard(
+                  gradient: g1,
+                  padding: EdgeInsets.all(12),
+                  child: Column(
+                    children: [
+                      Text(
+                        "This is a gradient card",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        "It is very cool",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                a.GradientCard(
+                  gradient: g2,
+                  padding: EdgeInsets.all(12),
+                  child: Column(
+                    children: [
+                      Text(
+                        "This is a gradient card",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        "It is very cool",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            space,
           ],
         ),
       ),

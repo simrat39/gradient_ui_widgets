@@ -7,3 +7,4 @@ export 'text/GradientText.dart';
 export 'text/GradientSelectableText.dart';
 export 'icon/GradientIcon.dart';
 export 'icon/GradientIconButton.dart';
+export 'other/GradientCard.dart';
