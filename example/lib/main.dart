@@ -66,7 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             space,
             Row(
@@ -154,18 +153,17 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Column(
                   children: [
-                    a.GradientRaisedButton(
+                    a.GradientElevatedButton(
                       onPressed: () {},
                       gradient: g1,
-                      textColor: Colors.white,
                       child: Text("This is a button"),
                     ),
                     space2,
-                    a.GradientRaisedButton(
+                    a.GradientElevatedButton.icon(
                       onPressed: () {},
                       gradient: g2,
-                      textColor: Colors.white,
-                      child: Text("This is a button"),
+                      icon: Icon(Icons.add),
+                      label: Text("Also a button"),
                     ),
                     space2,
                   ],
