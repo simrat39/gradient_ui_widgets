@@ -1,7 +1,6 @@
 name: gradient_ui_widgets
-description: Basic ui widgets with gradient support. 
-version: 1.0.0
-author: simrat39
+description: Basic ui widgets with gradient support.
+version: 1.0.0-nullsafety
 homepage: https://github.com/simrat39/gradient_ui_widgets
 
 environment:
