@@ -167,6 +167,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       textColor: Colors.white,
                       child: Text("This is a button"),
                     ),
+                    space2,
+                  ],
+                ),
+                Column(
+                  children: [
+                    a.GradientTextButton(
+                      onPressed: () {},
+                      gradient: g1,
+                      child: Text("This is a text button"),
+                    ),
+                    space2,
+                    a.GradientTextButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.ac_unit),
+                      label: Text(
+                        "Snowing",
+                      ),
+                      gradient: g2,
+                    ),
                   ],
                 ),
                 Row(
@@ -189,26 +208,67 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             space,
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                a.GradientSelectableText(
-                  "THIS IS A SELECTABLE",
-                  gradient: g1,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 60,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    a.GradientSelectableText(
+                      "THIS IS A SELECTABLE",
+                      gradient: g1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    a.GradientSelectableText(
+                      "GRADIENT TEXT",
+                      gradient: g2,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
-                a.GradientSelectableText(
-                  "GRADIENT TEXT",
-                  gradient: g2,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 60,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Column(
+                  children: [
+                    a.GradientCard(
+                      gradient: g1,
+                      padding: EdgeInsets.all(12),
+                      child: Column(
+                        children: [
+                          Text(
+                            "This is a gradient card",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            "It is very cool",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    a.GradientCard(
+                      gradient: g2,
+                      padding: EdgeInsets.all(12),
+                      child: Column(
+                        children: [
+                          Text(
+                            "This is a gradient card",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            "It is very cool",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -268,45 +328,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            space,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                a.GradientCard(
-                  gradient: g1,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    children: [
-                      Text(
-                        "This is a gradient card",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        "It is very cool",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-                a.GradientCard(
-                  gradient: g2,
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    children: [
-                      Text(
-                        "This is a gradient card",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        "It is very cool",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            space,
           ],
         ),
       ),
