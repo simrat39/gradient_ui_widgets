@@ -1,6 +1,6 @@
 name: gradient_ui_widgets
-description: UI widgets with gradient support. Supports many widgets like RaisedButton, FloatingActionButton, Icon, IconButton, Text, SelectableText etc with more to come.
-version: 1.0.1-nullsafety
+description: UI widgets with gradient support. Supports many widgets like Elevated/TextButton, FloatingActionButton, Icon, IconButton, Text, SelectableText etc with more to come.
+version: 1.0.2-nullsafety
 homepage: https://github.com/simrat39/gradient_ui_widgets
 
 environment:
