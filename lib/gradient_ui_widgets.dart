@@ -1,4 +1,4 @@
-library gradient_widgets;
+library gradient_ui_widgets;
 
 export 'progress_indicator/ProgressIndicator.dart';
 export 'buttons/GradientRaisedButton.dart';

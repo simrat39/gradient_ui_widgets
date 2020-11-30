@@ -1,3 +1,10 @@
-## [0.0.1] - TODO: Add release date.
-
-* TODO: Describe initial release.
+## [1.0.0] - Initial Release.
+* Supported Widgets:
+  * GradientRaisedButton
+  * GradientFloatingActionButton
+  * GradientIcon
+  * GradientIconButton
+  * GradientLinearProgressIndicator
+  * GradientCircularProgressIndicator
+  * GradientText
+  * GradientSelectableText

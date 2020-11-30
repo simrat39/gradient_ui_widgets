@@ -1,8 +1,8 @@
-name: gradient_widgets
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+name: gradient_ui_widgets
+description: Basic ui widgets with gradient support. 
+version: 1.0.0
+author: simrat39
+homepage: https://github.com/simrat39/gradient_ui_widgets
 
 environment:
   sdk: ">=2.12.0-0 <3.0.0"

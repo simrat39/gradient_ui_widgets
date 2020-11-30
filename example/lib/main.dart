@@ -1,4 +1,4 @@
-import 'package:gradient_widgets/gradient_widgets.dart' as a;
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
 import 'package:flutter/material.dart';
 
 void main() {

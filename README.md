@@ -1,4 +1,4 @@
-# gradient_widgets
+# gradient_ui_widgets
 
 Flutter widgets that support gradients
 
