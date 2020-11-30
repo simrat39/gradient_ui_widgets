@@ -71,7 +71,7 @@ class GradientRaisedButton extends RaisedButton {
           child: Ink(
             decoration: ShapeDecoration(
               gradient: gradient,
-              shape: shape ?? RoundedRectangleBorder(),
+              shape: shape ?? ButtonThemeData().shape,
             ),
             padding: padding,
             child: child,
