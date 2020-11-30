@@ -25,7 +25,7 @@ class GradientRaisedButton extends RaisedButton {
     double? highlightElevation,
     double? disabledElevation,
     EdgeInsetsGeometry padding =
-        const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+        const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
     VisualDensity? visualDensity,
     ShapeBorder? shape,
     Clip clipBehavior = Clip.none,
