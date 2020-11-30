@@ -190,18 +190,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             space,
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                a.GradientText(
-                  "THIS IS A",
+                a.GradientSelectableText(
+                  "THIS IS A SELECTABLE",
                   gradient: g1,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 60,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                a.GradientText(
+                a.GradientSelectableText(
                   "GRADIENT TEXT",
                   gradient: g2,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 60,
                     fontWeight: FontWeight.bold,
