@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Color(0xfff12711),
     Color(0xfff5af19),
   ]);
+  bool val = true;
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +75,34 @@ class _MyHomePageState extends State<MyHomePage> {
                 Flexible(
                   child: Column(
                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          a.GradientSwitch(
+                            gradient: g1,
+                            value: val,
+                            activeColor: Colors.white,
+                            onChanged: (a) {
+                              setState(() {
+                                val = !val;
+                                print(val);
+                              });
+                            },
+                          ),
+                          a.GradientSwitch(
+                            gradient: g2,
+                            value: val,
+                            activeColor: Colors.white,
+                            onChanged: (a) {
+                              setState(() {
+                                val = !val;
+                                print(val);
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      space2,
                       a.GradientLinearProgressIndicator(
                         valueGradient: g1,
                         backgroundColor: Colors.grey[200],

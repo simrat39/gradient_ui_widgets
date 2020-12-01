@@ -9,3 +9,4 @@ export 'text/gradient_selectable_text.dart';
 export 'icon/gradient_icon.dart';
 export 'icon/gradient_icon_button.dart';
 export 'other/gradient_card.dart';
+export 'other/gradient_switch.dart';
