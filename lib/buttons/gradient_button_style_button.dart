@@ -360,8 +360,8 @@ class _ButtonStyleState extends State<GradientButtonStyleButton>
         elevation: resolvedElevation!,
         textStyle: resolvedTextStyle?.copyWith(color: resolvedForegroundColor),
         shape: resolvedShape!.copyWith(side: resolvedSide),
-        color: resolvedBackgroundColor,
         shadowColor: resolvedShadowColor,
+        color: Colors.transparent,
         type: resolvedBackgroundColor == null
             ? MaterialType.transparency
             : MaterialType.button,
@@ -370,7 +370,7 @@ class _ButtonStyleState extends State<GradientButtonStyleButton>
         child: Ink(
           decoration: ShapeDecoration(
             shape: resolvedShape.copyWith(side: resolvedSide),
-            gradient: resolvedBackgroundColor != null ? widget.gradient : null,
+            gradient: widget.gradient,
           ),
           child: InkWell(
             onTap: widget.onPressed,
