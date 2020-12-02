@@ -78,16 +78,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          a.GradientSwitch(
-                            gradient: g1,
-                            value: val,
-                            activeColor: Colors.white,
-                            onChanged: (a) {
-                              setState(() {
-                                val = !val;
-                                print(val);
-                              });
-                            },
+                          Container(
+                            child: a.GradientSwitch(
+                              gradient: g1,
+                              value: val,
+                              activeColor: Colors.white,
+                              onChanged: (a) {
+                                setState(() {
+                                  val = !val;
+                                  print(val);
+                                });
+                              },
+                            ),
                           ),
                           a.GradientSwitch(
                             gradient: g2,

@@ -793,13 +793,14 @@ class _RenderSwitch extends RenderToggleable {
         break;
     }
 
-    final Color trackColor = isEnabled
-        ? Color.lerp(inactiveTrackColor, activeTrackColor, currentValue)!
-        : inactiveTrackColor;
-
     // ignore: invalid_use_of_protected_member
     final Gradient grad = gradient.lerpFrom(
         LinearGradient(colors: [inactiveTrackColor, inactiveTrackColor]),
+        currentValue)!;
+
+    // the top level gradient that only goes till the start of the thumb
+    final Gradient topGrad = gradient.lerpFrom(
+        LinearGradient(colors: [Colors.transparent, Colors.transparent]),
         currentValue)!;
 
     final Color thumbColor = isEnabled
@@ -825,12 +826,25 @@ class _RenderSwitch extends RenderToggleable {
       size.width - 2.0 * trackHorizontalPadding,
       _kTrackHeight,
     );
-    final Paint paint;
-    paint = Paint()..shader = grad.createShader(trackRect);
+
+    final Rect gradientRect = Rect.fromLTWH(
+      offset.dx + trackHorizontalPadding,
+      offset.dy + (size.height - _kTrackHeight) / 2.0,
+      (size.width - 2.0 * trackHorizontalPadding) - (_kThumbRadius * 1.2),
+      _kTrackHeight,
+    );
+
+    final Paint bottomPaint = Paint()..shader = grad.createShader(trackRect);
+    final Paint gradientPaint = Paint()
+      ..shader = topGrad.createShader(gradientRect);
 
     final RRect trackRRect = RRect.fromRectAndRadius(
         trackRect, const Radius.circular(_kTrackRadius));
-    canvas.drawRRect(trackRRect, paint);
+    canvas.drawRRect(trackRRect, bottomPaint);
+
+    final RRect gradientRRect = RRect.fromRectAndRadius(
+        gradientRect, const Radius.circular(_kTrackRadius));
+    canvas.drawRRect(gradientRRect, gradientPaint);
 
     final Offset thumbPosition = Offset(
       kRadialReactionRadius + visualPosition * _trackInnerLength,
